@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Swiss Notes — 个人作品集
 
-## Getting Started
+基于 Next.js 16 + TypeScript 构建的个人作品集网站，采用极简瑞士平面设计风格。
 
-First, run the development server:
+## 页面结构
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+首页          — 个人介绍 + 关键指标
+专业技能       — 三列技能矩阵
+精选项目       — 5 个 GitHub 开源项目展示
+联系          — QQ 联系方式
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 技术栈
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **框架**: Next.js 16 (App Router)
+- **语言**: TypeScript
+- **样式**: Inline Styles（瑞士设计风格）
+- **字体**: IBM Plex Mono / IBM Plex Sans / Playfair Display（Google Fonts）
+- **动画**: IntersectionObserver 滚动渐入
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 项目结构
 
-## Learn More
+```
+app/
+├── _components/           # UI 组件
+│   ├── nav-bar.tsx        # 导航栏
+│   ├── hero.tsx           # 首页 Hero
+│   ├── expertise-matrix.tsx # 技能矩阵
+│   ├── project-card.tsx   # 项目卡片
+│   ├── featured-work.tsx  # 精选作品
+│   ├── contact.tsx        # 联系板块
+│   ├── grid-svg.tsx       # SVG 装饰
+│   └── footer.tsx         # 页脚
+├── _data/
+│   └── constants.ts       # 数据常量
+├── _hooks/
+│   └── use-reveal.ts      # 滚动显示 Hook
+├── layout.tsx
+├── page.tsx
+└── globals.css
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 本地开发
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+访问 [http://localhost:3000](http://localhost:3000) 查看效果。
 
-## Deploy on Vercel
+## 部署
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+支持 Vercel 一键部署：
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+## 作者
+
+**PingGuoMiaoMiao**
+
+- GitHub: [@PingGuoMiaoMiao](https://github.com/PingGuoMiaoMiao)
+- QQ: 3226742838
